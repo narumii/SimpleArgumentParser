@@ -1,28 +1,3 @@
-## SimpleArgumentParser
-
----
-> Maven
-```xml
-<repositories>
-	<repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-```xml
-<dependencies>
-	<dependency>
-	    <groupId>com.github.narumii</groupId>
-	    <artifactId>SimpleArgumentParser</artifactId>
-	    <version>LATEST</version>
-	</dependency>
-</dependencies>
-```
-
----
-> Example
-```java
 import uwu.narumi.argparser.ArgumentParser;
 import uwu.narumi.argparser.option.Options;
 import uwu.narumi.argparser.rules.Rules;
@@ -62,5 +37,3 @@ public class Example {
         System.out.println("Written bytes to: " + Files.write(file, new byte[]{1, 2, 3}));
     }
 }
-
-```

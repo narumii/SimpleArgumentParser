@@ -3,6 +3,9 @@ package uwu.narumi.argparser.option;
 import java.math.BigInteger;
 import java.util.*;
 
+/*
+    TODO: Probably gonna remove toLowerCase stuff
+ */
 public class Options {
 
     private final Map<String, Option> options;
@@ -38,6 +41,7 @@ public class Options {
     }
 
     public Optional<String> asString(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -45,6 +49,7 @@ public class Options {
     }
 
     public Optional<Boolean> asBoolean(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -52,6 +57,7 @@ public class Options {
     }
 
     public Optional<Byte> asByte(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -59,6 +65,7 @@ public class Options {
     }
 
     public Optional<Short> asShort(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -66,6 +73,7 @@ public class Options {
     }
 
     public Optional<Integer> asInt(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -73,6 +81,7 @@ public class Options {
     }
 
     public Optional<Long> asLong(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -80,6 +89,7 @@ public class Options {
     }
 
     public Optional<Float> asFloat(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -87,6 +97,7 @@ public class Options {
     }
 
     public Optional<Double> asDouble(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
         if (!options.containsKey(optionName))
             return Optional.empty();
 
@@ -94,6 +105,10 @@ public class Options {
     }
 
     public Optional<BigInteger> asBigInteger(String optionName) {
+        optionName = optionName.toLowerCase(Locale.ROOT);
+        if (!options.containsKey(optionName))
+            return Optional.empty();
+
         return asBigInteger(optionName, 10);
     }
 

@@ -19,7 +19,7 @@ public class ArgumentParser {
         return new Builder();
     }
 
-    public Options parse(Rules rules, String... arguments) {
+    public Options parse(Rules rules, String[] arguments) {
         return parse(rules, String.join(" ", arguments));
     }
 

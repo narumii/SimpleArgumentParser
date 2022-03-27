@@ -44,7 +44,8 @@ public class Rules {
         }
 
         public Builder add(String name, boolean optional, boolean isArgument) {
-            rules.put(name, new Rule(name.toLowerCase(Locale.ROOT), optional, isArgument));
+            name = name.toLowerCase(Locale.ROOT);
+            rules.put(name, new Rule(name, optional, isArgument));
             return this;
         }
 
