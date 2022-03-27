@@ -14,6 +14,14 @@ public class Options {
         this.options = options;
     }
 
+    public boolean has(String optionName) {
+        return options.containsKey(optionName);
+    }
+
+    public boolean isEmpty(String optionName) {
+        return !has(optionName) || get(optionName).isEmpty();
+    }
+
     public Optional<Option> getOptional(String optionName) {
         return Optional.ofNullable(get(optionName));
     }
